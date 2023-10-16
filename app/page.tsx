@@ -6,6 +6,7 @@ import Map from "./components/map";
 import Information from "./components/information";
 import Lenis from '@studio-freight/lenis'
 
+/*
 
 const lenis = new Lenis()
 
@@ -18,7 +19,7 @@ function raf(time) {
   requestAnimationFrame(raf)
 }
 requestAnimationFrame(raf)
-
+*/
 
       /*<Router>
         <Routes>
