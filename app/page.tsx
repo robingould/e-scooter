@@ -6,20 +6,22 @@ import Map from "./components/map";
 import Information from "./components/information";
 import Lenis from '@studio-freight/lenis'
 
-/*
 
+if (typeof window !== "undefined") {
 const lenis = new Lenis()
+
 
 lenis.on('scroll', (e) => {
   console.log(e)
 })
 
-function raf(time) {
+const raf = function (time) {
   lenis.raf(time)
   requestAnimationFrame(raf)
 }
 requestAnimationFrame(raf)
-*/
+}
+
 
       /*<Router>
         <Routes>
