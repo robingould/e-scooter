@@ -1,0 +1,185 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+  --blackv: #1A1A1A;
+  --redv: #A26769;
+  --grayv: #DBDBDC;
+  --whitev: #F7F7F8;
+  --greenv: #95AEAE;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+
+html, body {
+  overflow:hidden;
+}
+
+.slider-track{
+  @apply h-3 top-0 bg-[color:var(--grayv)] rounded-xl;
+}
+
+.slider-track.slider-track-0 {
+  @apply bg-[color:var(--greenv)];
+}
+
+.slider-thumb:hover{
+  @apply shadow-[0_0_0_8px_rgba(149_174_175_/_0.3)];
+}
+
+.fallen-scooter{
+  position: relative;
+  height: 100vh;
+
+
+
+
+}
+.kid-on-scooter{
+  position: relative;
+  height: 100vh;
+
+
+}
+.scooter-hub{
+  position: relative;
+  height: 100vh;
+
+
+}
+
+.content{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  height: 100vh;
+  width: 100%;
+  transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+  backface-visibility: hidden;
+  -webkit-backface-visibility : hidden;
+}
+
+.bck{
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 20%;
+  z-index: 9998;
+  opacity: 100%;
+  backdrop-filter: blur(10px);
+  animation: fadein 1.5s;
+  background-color: rgba(255, 255, 255, 0.6);
+  box-shadow: 0px 5px 15px 2px rgba(255,255,255, 0.3);
+}
+.img-txt{
+  position: relative;
+  justify-content: left;
+  width: 2vw;
+  top: 5%;
+  left:  3%;
+  transform: translate(-50%);
+  z-index: 9999;
+  opacity: 100%;
+  background-color: var(--whitev);
+  text-transform: uppercase;
+  color: var(--blackv);
+  padding-top: 0.5rem;
+  padding-left: 0.5rem;
+  font-size: 1.5vw;
+  font-weight: bold;
+  letter-spacing: 15px;
+  box-shadow:   0px 0px 30px 0px var(--whitev);
+}
+
+
+.button {
+  cursor: pointer;
+  border: none;
+  z-index: 9999;
+  height: 2.5em;
+  width: 8em;
+  color: var(--greenv);
+  padding: 10px 30px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 50px;
+  margin: 4px 2px;
+  transition: 0.4s;
+  box-shadow: 
+    0.3em 0.3em 0 0 var(--greenv),
+    inset 0.3em 0.3em 0 0 var(--greenv);
+}
+.button:hover {
+  transform: scale(0.95);
+  color: var(--whitev);
+  box-shadow: 
+      0 0 0 0 var(--greenv),
+      inset 6em 3.5em 0 0 var(--greenv);
+}
+
+.img-txt-names{
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%);
+  z-index: 9999;
+  background-color: #333;
+  text-transform: uppercase;
+  color: #fff;
+  padding: 1rem;
+  font-size: .8vw;
+  letter-spacing: 10px;
+  width: max-content;
+  animation: fadein 1.5s;
+  box-shadow:  0px 0px 30px 5px white;
+}
+
+.scooter-gif{
+  position: absolute;
+  background-image: url(https://media1.giphy.com/media/UewAqOtDU7XBSCxzJ7/source.gif);
+}
+@keyframes fadein {
+  from{
+      opacity: 0%;
+  }
+  to{
+      opacity: 100%;
+  }
+}
+
+@keyframes slidein {
+  from {
+      margin-right: 100%;
+  }
+  
+  to {
+      margin-right: 0%;
+      width: 100%
+  }
+}
+
+@keyframes drop {
+  from{
+      margin-top: -2000px;
+
+  }
+  to{
+      margin-top: 0%;
+
+  }
+}
